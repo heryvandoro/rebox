@@ -1,0 +1,29 @@
+@import "../../styles/variables";
+
+.sidebar {
+  .ant-drawer-header {
+    border-bottom: none;
+  }
+  .ant-drawer-body {
+    padding: 1em 0;
+  }
+  .ant-menu:not(.ant-menu-horizontal) .ant-menu-item-selected {
+    background-color: $primary-light-color;
+  }
+  .ant-menu-item:hover,
+  .ant-menu-item-active,
+  .ant-menu:not(.ant-menu-inline) .ant-menu-submenu-open,
+  .ant-menu-submenu-active,
+  .ant-menu-submenu-title:hover,
+  .ant-menu-item>a:hover,
+  .ant-menu-item-selected>a,
+  .ant-menu-item-selected>a:hover {
+    color: #6b882c;
+  }
+  .ant-menu-vertical .ant-menu-item:after,
+  .ant-menu-vertical-left .ant-menu-item:after,
+  .ant-menu-vertical-right .ant-menu-item:after,
+  .ant-menu-inline .ant-menu-item:after {
+    border-right: 3px solid $primary-color;
+  }
+}

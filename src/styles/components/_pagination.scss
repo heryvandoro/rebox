@@ -1,0 +1,23 @@
+@import '../variables';
+
+.ant-pagination {
+	li {
+		border: none;
+
+		a {
+			border: none !important;
+			background-color: #f2f2f2 !important;
+			line-height: 32px !important;
+			-webkit-border-radius: 4px !important;
+			-moz-border-radius: 4px !important;
+			border-radius: 4px !important;
+		}
+
+		&.ant-pagination-item-active {
+			a {
+				background-color: $primary-color !important;
+				color: $white;
+			}
+		}
+	}
+}

@@ -1,0 +1,22 @@
+@import "../../styles/variables";
+$header-height: 70px;
+
+.admin-template {
+  .admin-template-header {
+    height: $header-height;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+
+    .menu-button {
+      color: $white;
+      font-size: 26px;
+    }
+  }
+
+  .admin-template-content {
+    min-height: calc(100vh - #{$header-height});
+    padding: 20px;
+  }
+}

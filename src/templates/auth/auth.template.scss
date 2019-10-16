@@ -1,0 +1,57 @@
+@import '../../styles/variables';
+
+.auth-template {
+	display: flex;
+	height: 100vh;
+	width: 100%;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+
+	.background {
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 50%;
+		background-color: $primary-color;
+		position: absolute;
+		z-index: -1;
+	}
+
+	.logo {
+		top: 15%;
+		text-align: center;
+		position: absolute;
+
+		h1 {
+			color: $white;
+			margin-bottom: 30px;
+			font-size: 34px;
+		}
+
+		img {
+			width: 100%;
+		}
+	}
+
+	.auth-container {
+		background-color: $white;
+		width: 500px;
+		padding: 30px 50px;
+		margin-top: 30px;
+		border: 1px solid #eee;
+		-webkit-border-radius: 10px;
+		-moz-border-radius: 10px;
+		border-radius: 10px;
+
+		.title {
+			font-size: 26px;
+			margin-top: 25px;
+			text-align: center;
+		}
+
+		.content {
+			padding: 25px 0;
+		}
+	}
+}

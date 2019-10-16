@@ -1,0 +1,55 @@
+@import "../variables";
+
+.form-big {
+  input {
+    height: $form-big-height;
+    line-height: $form-big-height;
+  }
+
+  .ant-input {
+    border-radius: 4px;
+    border: solid 1px #dbe0e4;
+    font-size: 14px;
+    color: #727084 !important;
+
+    &:focus {
+      box-shadow: none !important;
+    }
+  }
+
+  .ant-select-selection {
+    height: $form-big-height;
+    box-shadow: none !important;
+
+    .ant-select-selection__rendered {
+      line-height: $form-big-height;
+    }
+  }
+
+  .ant-form-item {
+    margin-bottom: 8px !important;
+  }
+
+  .ant-form-item-control {
+    &.has-error {
+      .ant-form-explain {
+        margin-top: 3px;
+      }
+    }
+
+    .ant-input-group-addon {
+      height: $form-big-height;
+    }
+  }
+
+  .ant-form-item-label {
+    line-height: 32px;
+    label {
+      font-weight: 500;
+      margin-bottom: 8px;
+      &:after {
+        content: '' !important;
+      }
+    }
+  }
+}

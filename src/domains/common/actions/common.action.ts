@@ -1,0 +1,3 @@
+export const SET_LOADING = 'SET_LOADING';
+export const SET_WINDOW_WIDTH = 'SET_WINDOW_WIDTH';
+export const TOGGLE_SIDEBAR = 'TOGGLE_SIDEBAR';

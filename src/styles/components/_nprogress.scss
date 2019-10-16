@@ -1,0 +1,18 @@
+@import '~nprogress/nprogress.css';
+@import '../variables';
+
+#nprogress {
+  position: absolute;
+  width: 100%;
+  top: 0;
+
+  .bar {
+    height: 4px;
+    background: $secondary-color;
+  }
+
+  .spinner-icon {
+    border-top-color: $secondary-color;
+    border-left-color: $secondary-color;
+  }
+}
