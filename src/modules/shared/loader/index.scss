@@ -6,7 +6,7 @@ $main-spinner-dimensions: $basic-spinner-dimensions - $border-width * 1.5;
 $small-spinner-dimensions: $main-spinner-dimensions * 0.8;
 $transparent-color: #ccc;
 
-.diamond-loader {
+.loader {
 	position: relative;
 	width: $basic-spinner-dimensions;
 	height: $basic-spinner-dimensions;
@@ -61,6 +61,10 @@ $transparent-color: #ccc;
 			border-top-color: transparent;
 			border-left-color: transparent;
 		}
+	}
+
+	.logo {
+		text-align: center;
 	}
 }
 
