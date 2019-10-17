@@ -98,9 +98,11 @@ $header-height: 80px;
     }
   }
 
-  .logo {
-    img {
-      display: none;
+  .admin-template-header {
+    >.logo {
+      img {
+        display: none;
+      }
     }
   }
 }

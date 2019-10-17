@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Link, RouteComponentProps, withRouter } from 'react-router-dom';
-import { Drawer, Menu } from 'antd';
+import { Divider, Drawer, Menu } from 'antd';
 import { connect } from 'react-redux';
 import { AppState } from '@rebox/store';
 import { AuthService } from '@rebox/domains/auth/services/auth.service';
@@ -32,9 +32,15 @@ class Sidebar extends Component<SidebarProps, any> {
 
 		return (
 			<Drawer className="sidebar" closable={false} placement="left" visible={isSidebarVisible} onClose={this.commonService.toggleSidebar}>
-				<Menu>
+				<div className="logo">
+					<img src="https://via.placeholder.com/220x80?text=LOGO" />
+				</div>
+				<Menu mode="inline">
 					<Menu.Item>
 						<Link to="/">Home</Link>
+					</Menu.Item>
+					<Menu.Item>
+						<Link to="/todos">Todo</Link>
 					</Menu.Item>
 				</Menu>
 			</Drawer>
