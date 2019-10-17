@@ -42,6 +42,9 @@ class Sidebar extends Component<SidebarProps, any> {
 					<Menu.Item>
 						<Link to="/todos">Todo</Link>
 					</Menu.Item>
+					<Menu.Item onClick={this.onLogout}>
+						Logout
+					</Menu.Item>
 				</Menu>
 			</Drawer>
 		);

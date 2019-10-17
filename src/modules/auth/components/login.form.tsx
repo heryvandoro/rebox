@@ -33,6 +33,7 @@ class LoginForm extends Component<LoginFormProps, any> {
 				</Form.Item>
 				<div className="mt-4">
 					<Button
+						size="large"
 						htmlType="submit"
 						disabled={hasError(getFieldsError()) || isLoading}
 						type="primary"

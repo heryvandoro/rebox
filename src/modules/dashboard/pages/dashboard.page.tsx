@@ -4,6 +4,7 @@ import { Card, Col, Row } from 'antd';
 export default class DashboardPage extends Component {
 	render() {
 		return (
+			<div className="admin-template-content">
 			<Row>
 				<Col span={24}>
 					<Card>
@@ -11,6 +12,7 @@ export default class DashboardPage extends Component {
 					</Card>
 				</Col>
 			</Row>
+			</div>
 		);
 	}
 }

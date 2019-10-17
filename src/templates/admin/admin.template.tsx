@@ -89,7 +89,7 @@ class AdminTemplate extends Component<AdminTemplateProps, any> {
 						</Popover>
 					</div>
 				</Layout.Header>
-				<Layout.Content className="admin-template-content">
+				<Layout.Content>
 					<App routes={ADMIN_TEMPLATE_ROUTES} />
 				</Layout.Content>
 			</Layout>

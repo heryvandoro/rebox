@@ -56,6 +56,10 @@ $header-height: 80px;
     min-height: calc(100vh - #{$header-height});
     padding: 20px;
   }
+
+  .error-page {
+    min-height: calc(100vh - #{$header-height});
+  }
 }
 
 .user-control-popup {
