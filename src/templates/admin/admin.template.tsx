@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import { Layout, Icon } from 'antd';
-import { RouteComponentProps, withRouter } from 'react-router-dom';
+import { Layout, Icon, Avatar, Popover } from 'antd';
+import { Link, RouteComponentProps, withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { AppState } from '@rebox/store';
 import App from '@rebox/app';
@@ -31,12 +31,6 @@ class AdminTemplate extends Component<AdminTemplateProps, any> {
 		this.setState({
 			selectedTarget: match.path,
 		});
-
-		this.commonService.setWindowWidth(window.innerWidth);
-
-		window.addEventListener('resize', () => {
-			this.commonService.setWindowWidth(window.innerWidth);
-		});
 	}
 
 	async UNSAFE_componentWillMount(): Promise<void> {
@@ -66,7 +60,34 @@ class AdminTemplate extends Component<AdminTemplateProps, any> {
 			<Layout className="admin-template">
 				<Sidebar />
 				<Layout.Header className="admin-template-header">
-					<Icon type="bars" className="menu-button" onClick={this.commonService.toggleSidebar} />
+					<div className="logo">
+						<Icon type="bars" className="menu-button" onClick={this.commonService.toggleSidebar} />
+						<img src="https://via.placeholder.com/160x50?text=LOGO" />
+					</div>
+					<div className="title">
+						Dashboard
+					</div>
+					<div className="user-control">
+						<Popover trigger="click" className="user-control-container" overlayClassName="user-control-popup" placement="bottomRight" content={
+							<div>
+								<div className="avatar">
+									<Avatar />
+								</div>
+								<div className="name">
+									Hery Vandoro
+								</div>
+								<div className="email">
+									vandorohery99@gmail.com
+								</div>
+								<div className="links">
+									<Link to="/profile">Profile</Link>
+									<Link to="/logout">Sign Out</Link>
+								</div>
+							</div>
+						}>
+							<Avatar /> <span className="name">Hery Vandoro</span> <Icon className="arrow-down" type="caret-down"/>
+						</Popover>
+					</div>
 				</Layout.Header>
 				<Layout.Content className="admin-template-content">
 					<App routes={ADMIN_TEMPLATE_ROUTES} />
@@ -77,8 +98,6 @@ class AdminTemplate extends Component<AdminTemplateProps, any> {
 }
 
 const mapStateToProps = (state: AppState) => ({
-	windowWidth: state.common.windowWidth,
-	isSidebarVisible: state.common.isSidebarVisible,
 	me: state.auth.me,
 });
 

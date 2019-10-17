@@ -1,5 +1,5 @@
 @import "../../styles/variables";
-$header-height: 70px;
+$header-height: 80px;
 
 .admin-template {
   .admin-template-header {
@@ -8,15 +8,99 @@ $header-height: 70px;
     justify-content: space-between;
     align-items: center;
     padding: 20px;
+    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.1);
+    background-color: $white;
 
-    .menu-button {
-      color: $white;
-      font-size: 26px;
+    .logo {
+      display: flex;
+      align-items: center;
+      .menu-button {
+        color: #333;
+        font-size: 26px;
+        z-index: 2;
+      }
+
+      img {
+        margin-left: 20px;
+      }
+    }
+
+    .title {
+      font-size: 18px;
+      font-weight: bold;
+      text-transform: uppercase;
+      position: absolute;
+      text-align: center;
+      width: 100%;
+      left: 0;
+      z-index: 1;
+      user-select: none;
+    }
+
+    .user-control {
+      z-index: 2;
+      .user-control-container {
+        cursor: pointer;
+
+        >.name {
+          margin-left: 10px;
+          margin-right: 5px;
+          font-weight: 500;
+          user-select: none;
+        }
+      }
     }
   }
 
   .admin-template-content {
     min-height: calc(100vh - #{$header-height});
     padding: 20px;
+  }
+}
+
+.user-control-popup {
+  min-width: 220px;
+  top: 78px!important;
+  .avatar {
+    text-align: center;
+    >.ant-avatar {
+      height: 50px;
+      width: 50px;
+    }
+  }
+  .name {
+    margin-top: 10px;
+    text-align: center;
+    font-size: 13px;
+    font-weight: bold;
+  }
+  .email {
+    padding: 10px 0;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+    font-size: 12px;
+    margin: 10px 0;
+    text-align: center;
+  }
+
+  .links {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .user-control {
+    .user-control-container {
+      >.name, >.arrow-down {
+        display: none;
+      }
+    }
+  }
+
+  .logo {
+    img {
+      display: none;
+    }
   }
 }

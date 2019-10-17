@@ -1,16 +1,11 @@
 import { Reducer } from '@rebox/domains/shared/types/reducer';
 import CommonState from '@rebox/domains/common/states/state';
-import {
-	SET_LOADING,
-	SET_WINDOW_WIDTH,
-	TOGGLE_SIDEBAR,
-} from '@rebox/domains/common/actions/common.action';
+import { SET_LOADING, TOGGLE_SIDEBAR } from '@rebox/domains/common/actions/common.action';
 
 export class CommonReducer extends Reducer<CommonState> {
 	constructor() {
 		super({
 			loading: {},
-			windowWidth: 0,
 			isSidebarVisible: false,
 		});
 	}
@@ -22,13 +17,6 @@ export class CommonReducer extends Reducer<CommonState> {
 				...state.loading,
 				[payload.key]: payload.value,
 			},
-		};
-	}
-
-	public setWindowWidth(state: CommonState, payload: number): CommonState {
-		return {
-			...state,
-			windowWidth: payload,
 		};
 	}
 
@@ -44,7 +32,6 @@ export class CommonReducer extends Reducer<CommonState> {
 	} {
 		return {
 			[SET_LOADING]: this.setLoading,
-			[SET_WINDOW_WIDTH]: this.setWindowWidth,
 			[TOGGLE_SIDEBAR]: this.toggleSidebar,
 		};
 	}
