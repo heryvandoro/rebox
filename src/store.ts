@@ -4,10 +4,13 @@ import { AuthState } from '@rebox/domains/auth/states/state';
 import { AuthReducer } from '@rebox/domains/auth/reducers/auth.reducer';
 import CommonState from '@rebox/domains/common/states/state';
 import { CommonReducer } from '@rebox/domains/common/reducers/common.reducer';
+import { TodoState } from '@rebox/domains/todo/states/state';
+import { TodoReducer } from '@rebox/domains/todo/reducers/todo.reducer';
 
 export interface AppState {
 	auth: AuthState;
 	common: CommonState;
+	todo: TodoState;
 }
 
 export const logger: Middleware = () => (next) => (action) => {
@@ -27,6 +30,7 @@ function configureStore(): Store<any> {
 	let rootReducer: ReducersMapObject<AppState, any> = {
 		auth: new AuthReducer().build(),
 		common: new CommonReducer().build(),
+		todo: new TodoReducer().build()
 	};
 
 	return createStore(

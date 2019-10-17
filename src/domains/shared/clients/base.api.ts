@@ -1,9 +1,4 @@
-import axios, {
-	AxiosInstance,
-	AxiosRequestConfig,
-	AxiosResponse,
-	Method,
-} from 'axios';
+import axios, { AxiosInstance, AxiosRequestConfig, AxiosResponse, Method } from 'axios';
 import { AppConfig } from '@rebox/configs/app';
 import { preRequestInterceptor } from '@rebox/domains/shared/interceptors/pre-request.interceptor';
 import { errorInterceptor } from '@rebox/domains/shared/interceptors/error.interceptor';
